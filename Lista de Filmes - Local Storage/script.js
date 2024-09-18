@@ -38,31 +38,35 @@ const listaFilmes = document.querySelector('#listaFilmes')
 
 window.onload = () => {
   if (localStorage.getItem('favoritos')) {
-    filmesFavoritos = JSON.parse(localStorage.getItem('favoritos'))
+    filmesFavoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+    console.log(filmesFavoritos);  
   }
-  renderizarLista()
-}
+  
+  renderizarLista();
+};
 
-const renderizarLista = () => {
+const renderizarLista = () =>{
   listaFilmes.innerHTML = ""
-  filmes.forEach((filme) => {
-    const itemLista = document.createElement('li')
-    listaFilmes.append(itemLista)
-    itemLista.innerHTML = `Meu filme: ${filme.nome}`
+  filmes.forEach((filme)=>{
+      const itemLista = document.createElement('li')
+      listaFilmes.append(itemLista)
+      itemLista.innerHTML = `Meu filme ${filme.nome}`
 
-    const favorito = document.createElement('img')
+      const favorito = document.createElement('img')
+      
+      let estaFavoritado = filmesFavoritos.find(fav => fav.id === filme.id);
+      if (estaFavoritado) {
+        favorito.src = 'img/heart-fill.svg';
+      } else {
+        favorito.src = 'img/heart.svg';
+      }
 
-    const isFavorito = filmesFavoritos.some(f => f.id === filme.id)
+      favorito.style.cursor = 'pointer'
+      favorito.addEventListener('click',(e)=>{
+          favoritoClicado(e,filme)
 
-    favorito.src = isFavorito ? 'img/heart-fill.svg' : 'img/heart.svg'
-    favorito.style.cursor = 'pointer'
-    favorito.alt = isFavorito ? 'Favoritado' : 'Não favoritado'
-
-    favorito.addEventListener('click', (e) => {
-      favoritoClicado(e, filme)
-    })
-
-    itemLista.append(favorito)
+      })
+      itemLista.append(favorito)
   })
 }
 

@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: "Kaisei HarunoUmi", serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #ffeeee;
 }
 .container {
     max-width: 600px;
@@ -17,27 +22,34 @@ input[type="text"] {
     width: calc(100% - 80px);
     padding: 10px;
     margin-right: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #250202;
     border-radius: 4px;
     outline: none;
+    font-family: "Kaisei HarunoUmi", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 3%;
 }
 button {
     padding: 10px 20px;
-    background-color: #000;
+    background-color: #ee9696;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-family: "Kaisei HarunoUmi", serif;
+    font-weight: 500;
+    font-style: normal;
 }
 button:hover {
-    background-color: #0056b3;
+    background-color: #ba0707;
 }
 ul {
     list-style-type: none;
     padding: 0;
 }
 li {
-    background-color: #000;
+    background-color: #ee9696;
     color: #fff;
     padding: 10px;
     margin-top: 5px;
