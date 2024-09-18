@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kaisei HarunoUmi", serif;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  background-color: #fde6e6; 
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; 
+  justify-items: center;
+  margin-top: 1%;
+  border-radius: 8px;
+  background-color: #fde6e6; 
+}
+
+.button {
+  text-decoration: none;
+  background-color: #f5abab; 
+  color: #ffffff;
+  padding: 15px 30px; 
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .button-container {
+    grid-template-columns: 1fr; 
+  }
+}
+
+.titulo {
+  text-align: center;
+}

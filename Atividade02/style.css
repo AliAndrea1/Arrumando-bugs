@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    font-family: "Kaisei HarunoUmi", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    background-color: #f8f8f8; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start;
+    min-height: 100vh; 
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+    max-width: 1200px; 
+    width: 100%; 
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.titulo2 {
+    text-align: center;
+    margin: 5% 0;
+}
+
+.produto {
+    border: 1px solid #3a0202;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffeeee;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.manual {
+    border: 1px solid #190030;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffeeee;
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+}
+
+#lista-produtos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+button {
+    background-color: #725364; 
+    color: white; 
+    padding: 9px 10px;
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-size: 16px;
+    font-weight: bold; 
+    transition: background-color 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
