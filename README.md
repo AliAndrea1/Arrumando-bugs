@@ -1,1 +1,1 @@
- link do GitHub Pages: pahttps://aliandrea1.github.io/Arrumando-bugs/
+ link do GitHub Pages: https://aliandrea1.github.io/Arrumando-bugs/
