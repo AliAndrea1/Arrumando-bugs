@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div>
+            <h2 class="titulo">Produtos fornecidos:</h2>
+
+            <ul id="lista-produtos"></ul>
+
+            <div class="produto">
+                <p>ID: 1</p>
+                <p>Nome: Camiseta</p>
+                <p>Valor: R$29.99</p>
+                <p>Quantidade: 2</p>
+                <button onclick="adicionarProduto(1, 'Camiseta', 29.99, 2)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <p>ID: 2</p>
+                <p>Nome: Calça Jeans</p>
+                <p>Valor: R$99.90</p>
+                <p>Quantidade: 1</p>
+                <button onclick="adicionarProduto(2, 'Calça Jeans', 99.90, 1)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <p>ID: 3</p>
+                <p>Nome: Tênis</p>
+                <p>Valor: R$149.90</p>
+                <p>Quantidade: 1</p>
+                <button onclick="adicionarProduto(3, 'Tênis', 149.90, 1)">Adicionar ao Carrinho</button>
+            </div>
+
+            <h2 class="titulo2">Adicionando manualmente:</h2>
+            <div class="manual">
+                <form onsubmit="adicionandoManualmente(event)">
+                <label>ID: <input type="number" id="produto-id" step="4" required></label><br>
+                <label>Nome: <input type="text" id="produto-nome" required></label><br>
+                <label>Valor: <input type="number" id="produto-valor" step="0.01" required></label><br>
+                <label>Quantidade: <input type="number" id="produto-quantidade" step="1" required></label><br>
+                <button type="submit">Adicionar Produto</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="atividade2.js"></script>
+</body>
+
+</html>
